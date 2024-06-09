@@ -6,6 +6,7 @@ It is built using:
 
 - Next15
 - Supabase,
-- TailwindCSS
+- TailwindCSS,
+- Shadcn/ui
 
 The app is still in development and is not yet ready for production. The dependeny list above will be updated as the project progresses further. The app is currently using `pnpm`.
