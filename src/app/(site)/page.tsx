@@ -8,12 +8,31 @@ import { CLIENTS } from "@/lib/constants";
 const HomePage = () => {
   return (
     <>
-      <section className="overflow-hidden px-4 sm:px-6 mt-10 sm:flex sm:flex-col gap-4 md:justify-center md:items-center">
+      <section
+        className="overflow-hidden
+      px-4
+      sm:px-6
+      mt-10
+      sm:flex
+      sm:flex-col
+      gap-4
+      md:justify-center
+      md:items-center"
+      >
         <TitleSection
           pill="✨ Your workspace, Perfected"
           title="All-In-One Collaboration and Productivity Platform"
         />
-        <div className="bg-white p-[2px] mt-6 rounded-xl bg-gradient-to-r from-primary to-brand-primaryBlue sm:w-[300px]">
+        <div
+          className="bg-white
+        p-[2px]
+        mt-6
+        rounded-xl
+        bg-gradient-to-r
+        from-primary
+        to-brand-primaryBlue
+        sm:w-[300px]"
+        >
           <Button
             variant="secondary"
             className="w-full rounded-[10px] p-6 text-2xl bg-background"
@@ -46,6 +65,16 @@ const HomePage = () => {
             </div>
           ))}
         </div>
+      </section>
+      <section className="px-4 sm:px-6 flex justify-center items-center flex-col relative">
+        {/* purple gradient-glow section */}
+        <div className="w-[30%] blur-[120px] rounded-full h-32 absolute bg-brand-primaryPurple/50 -z-10 top-22" />
+        <TitleSection
+          title="Keep track of your meetings all in one place"
+          subheading="Experience all the benefits of our platform. Select a plan that suits your needs and take your productivity to new heights."
+          pill="Features"
+        />
+        <div></div>
       </section>
     </>
   );
