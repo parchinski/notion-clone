@@ -4,12 +4,13 @@ This is a clone of the popular note taking app Notion with a darker color scheme
 
 It is built using:
 
-- Next15
-- Supabase,
-- TailwindCSS,
-- Shadcn/ui
+- Next15 for static site generation
+- Supabase for postgreSQL db
+- TailwindCSS for styles
+- Shadcn/ui for components
+- Zod for input validation
 
-The app is still in development and is not yet ready for production. The dependeny list above will be updated as the project progresses further.
+This site requires a .env of a specific format that I can provide if you email me <3
 
 ## How to start
 
