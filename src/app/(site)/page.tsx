@@ -2,7 +2,6 @@ import Image from "next/image";
 import clsx from "clsx";
 import { randomUUID } from "crypto";
 import { twMerge } from "tailwind-merge";
-
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { CardContent, CardDescription, CardTitle } from "@/components/ui/card";
@@ -18,15 +17,7 @@ const HomePage = () => {
   return (
     <>
       <section
-        className="overflow-hidden
-      px-4
-      sm:px-6
-      mt-10
-      sm:flex
-      sm:flex-col
-      gap-4
-      md:justify-center
-      md:items-center"
+        className="gap-4 px-4 mt-10 overflow-hidden sm:px-6 sm:flex sm:flex-col md:justify-center md:items-center"
       >
         <TitleSection
           pill="✨ Your workspace, Perfected"
@@ -109,9 +100,7 @@ const HomePage = () => {
           {[...Array(2)].map((arr) => (
             <div
               key={randomUUID()}
-              className="flex
-            flex-nowrap
-            animate-slide"
+              className="flex flex-nowrap animate-slide"
             >
               {CLIENTS.map((client) => (
                 <div
@@ -127,8 +116,7 @@ const HomePage = () => {
                     src={client.logo}
                     alt={client.alt}
                     width={200}
-                    className="object-contain
-                    max-w-none"
+                    className="object-contain max-w-none"
                   />
                 </div>
               ))}
@@ -137,13 +125,7 @@ const HomePage = () => {
         </div>
       </section>
       <section
-        className="px-4
-      sm:px-6
-      flex
-      justify-center
-      items-center
-      flex-col
-      relative"
+        className="relative flex flex-col items-center justify-center px-4 sm:px-6"
       >
         {/* purple gradient-glow section */}
         <div
@@ -189,13 +171,7 @@ const HomePage = () => {
         top-56"
         />
         <div
-          className="mt-20
-        px-4
-        sm:px-6
-        flex
-        flex-col
-        overflow-x-hidden
-        overflow-visible"
+          className="flex flex-col px-4 mt-20 overflow-visible overflow-x-hidden sm:px-6"
         >
           <TitleSection
             title="Trusted by all"
@@ -226,9 +202,7 @@ const HomePage = () => {
               dark:from-border dark:to-background"
                   cardHeader={
                     <div
-                      className="flex
-                  items-center
-                  gap-4"
+                      className="flex items-center gap-4"
                     >
                       <Avatar>
                         <AvatarImage src={`/avatars/${index + 1}.png`} />
@@ -256,9 +230,7 @@ const HomePage = () => {
         </div>
       </section>
       <section
-        className="mt-20
-      px-4
-      sm:px-6"
+        className="px-4 mt-20 sm:px-6"
       >
         <TitleSection
           title="The Perfect Plan For You"
@@ -266,14 +238,7 @@ const HomePage = () => {
           pill="Pricing"
         />
         <div
-          className="flex
-        flex-col-reverse
-        sm:flex-row
-        gap-4
-        justify-center
-        sm:items-stretch
-        items-center
-        mt-10"
+          className="flex flex-col-reverse items-center justify-center gap-4 mt-10 sm:flex-row sm:items-stretch"
         >
           {PRICING_CARDS.map((card) => (
             <CustomCard
@@ -304,9 +269,7 @@ const HomePage = () => {
                       <Image
                         src={Diamond}
                         alt="Pro Plan Icon"
-                        className="absolute
-                      top-6
-                      right-6"
+                        className="absolute top-6 right-6"
                       />
                     </>
                   )}
@@ -316,15 +279,13 @@ const HomePage = () => {
               cardContent={
                 <CardContent className="p-0">
                   <span
-                    className="font-normal
-                  text-2xl"
+                    className="text-2xl font-normal"
                   >
                     ${card.price}
                   </span>
                   {+card.price > 0 ? (
                     <span
-                      className="dark:text-washed-purple-800
-                    ml-1"
+                      className="ml-1 dark:text-washed-purple-800"
                     >
                       /mo
                     </span>
@@ -336,9 +297,7 @@ const HomePage = () => {
                   </p>
                   <Button
                     variant="btn-primary"
-                    className="whitespace-nowrap
-                  w-full
-                  mt-4"
+                    className="w-full mt-4 whitespace-nowrap"
                   >
                     {card.planType === PRICING_PLANS.proplan
                       ? "Go Pro"
@@ -348,19 +307,13 @@ const HomePage = () => {
               }
               cardFooter={
                 <ul
-                  className="font-normal
-                  flex
-                  mb-2
-                  flex-col
-                  gap-4"
+                  className="flex flex-col gap-4 mb-2 font-normal"
                 >
                   <small>{card.highlightFeature}</small>
                   {card.freatures.map((feature) => (
                     <li
                       key={feature}
-                      className="flex
-                    items-center
-                    gap-2"
+                      className="flex items-center gap-2"
                     >
                       <Image src={CheckIcon} alt="Check Icon" />
                       {feature}
